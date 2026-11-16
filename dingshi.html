@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>顶纸涩行 | 造境计划 CREATE REALMS</title>
+    <meta name="description" content="顶纸涩行：聚焦书法、碑帖与传统审美的人文交流栏目，法帖解读、书家掌故与笔法审美，书卷气质，与造境计划主品牌相互映照。">
+    <meta name="keywords" content="顶纸涩行,书法,碑帖,法帖释文,书家掌故,传统审美,造境计划">
+    <meta property="og:title" content="顶纸涩行 | 造境计划 CREATE REALMS">
+    <meta property="og:description" content="法帖解读、书家掌故与笔法审美，书法人文交流栏目。">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F3F1EB'/%3E%3Ctext x='16' y='22' font-size='18' fill='%23A47D52' text-anchor='middle'%3E涩%3C/text%3E%3C/svg%3E">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { ink: 'var(--bg)', paper: 'var(--text)', silver: 'var(--text-soft)', gold: 'var(--gold)' },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'system-ui', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="theme-paper antialiased">
+
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <a href="index.html" class="text-lg font-light tracking-[0.2em] text-paper">造境计划 <span class="text-gold text-xs">CREATE REALMS</span></a>
+            <div class="hidden md:flex items-center gap-9 text-sm tracking-wider text-paper">
+                <a href="index.html" class="nav-link hover:text-gold transition-colors">首页</a>
+                <a href="works.html" class="nav-link hover:text-gold transition-colors">作品案例</a>
+                <a href="designers.html" class="nav-link hover:text-gold transition-colors">明星造境师</a>
+                <a href="articles.html" class="nav-link hover:text-gold transition-colors">造境观点</a>
+                <a href="dingshi.html" class="nav-link active text-gold">顶纸涩行</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="切换主题"></button>
+            </div>
+            <div class="md:hidden flex items-center gap-3">
+                <button class="theme-toggle" aria-label="切换主题"></button>
+                <button id="menu-toggle" class="text-paper" aria-label="菜单">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden px-6 pb-5 flex flex-col gap-4 text-sm tracking-wider bg-soft text-paper">
+            <a href="index.html" class="hover:text-gold">首页</a>
+            <a href="works.html" class="hover:text-gold">作品案例</a>
+            <a href="designers.html" class="hover:text-gold">明星造境师</a>
+            <a href="articles.html" class="hover:text-gold">造境观点</a>
+            <a href="dingshi.html" class="text-gold">顶纸涩行</a>
+        </div>
+    </nav>
+
+    <!-- 刊头：竖排刊名 + 卷首语 -->
+    <header class="pt-32 md:pt-40 pb-16 px-6">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-12 gap-10 items-end">
+            <div class="md:col-span-5 flex items-start gap-8">
+                <h1 class="ds-spine text-paper" style="font-size:2rem">顶纸涩行</h1>
+                <div class="pt-1">
+                    <span class="ds-seal">书法志</span>
+                    <p class="text-gold text-xs tracking-[0.3em] mt-5" style="writing-mode:vertical-rl">臨池看帖　筆底留痕</p>
+                </div>
+            </div>
+            <div class="md:col-span-7">
+                <p class="entry-idx mb-5">DING ZHI SE XING · JOURNAL OF CALLIGRAPHY</p>
+                <p class="text-silver leading-loose max-w-lg">读法帖、聊书家、谈笔法与审美。这里不做书法教学，只把看帖时的那点体会记下来——一处学书人的交流角落，与造境计划的当代空间创意彼此映照。</p>
+                <div class="flex flex-wrap gap-x-8 gap-y-2 mt-6 text-xs text-silver/80">
+                    <span>法帖释文 · 繁体</span>
+                    <span>书家掌故</span>
+                    <span>笔法审美</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 帖目辑览：书法志式条目 -->
+    <main class="px-6 pb-16">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex items-end justify-between mb-8">
+                <p class="entry-tag">帖目輯覽 · SELECTED</p>
+                <p class="text-silver/60 text-xs tracking-widest">共 06 目</p>
+            </div>
+
+            <article class="entry scroll-reveal">
+                <div class="entry-head">
+                    <span class="entry-idx">01</span>
+                    <span class="ds-seal">顏真卿 · 唐</span>
+                    <p class="text-silver/60 text-xs leading-loose">行書 · 稿本</p>
+                </div>
+                <div>
+                    <h2 class="entry-title mb-4">《祭侄文稿》血泪凝成的笔墨</h2>
+                    <p class="entry-sum">一篇在悲愤与泣血中写成的草稿，涂改纵横处，正是书法最真切的情绪痕迹。</p>
+                    <blockquote class="entry-verse">「賊臣不救，孤城圍逼，父陷子死，巢傾卵覆。」</blockquote>
+                    <p class="entry-tag mt-5">#顶纸涩行</p>
+                </div>
+            </article>
+
+            <article class="entry scroll-reveal">
+                <div class="entry-head">
+                    <span class="entry-idx">02</span>
+                    <span class="ds-seal">蔡京 · 宋</span>
+                    <p class="text-silver/60 text-xs leading-loose">行書 · 尺牘</p>
+                </div>
+                <div>
+                    <h2 class="entry-title mb-4">《节夫帖》骂名之下掩不住的好字</h2>
+                    <p class="entry-sum">人品与书迹常常分道而行，抛开史论，这手笔力与结字依然立得住。</p>
+                    <p class="entry-tag mt-5">#顶纸涩行</p>
+                </div>
+            </article>
+
+            <article class="entry scroll-reveal">
+                <div class="entry-head">
+                    <span class="entry-idx">03</span>
+                    <span class="ds-seal">吳彩鸞 · 唐</span>
+                    <p class="text-silver/60 text-xs leading-loose">小楷 · 寫本</p>
+                </div>
+                <div>
+                    <h2 class="entry-title mb-4">《唐韵》传说女仙，其实在抄书养家</h2>
+                    <p class="entry-sum">一位唐代女书家，以抄书写韵谋生，卷子里的勤勉与笔姿都藏着普通人的坚持。</p>
+                    <p class="entry-tag mt-5">#顶纸涩行</p>
+                </div>
+            </article>
+
+            <article class="entry scroll-reveal">
+                <div class="entry-head">
+                    <span class="entry-idx">04</span>
+                    <span class="ds-seal">陸宗楷 · 清</span>
+                    <p class="text-silver/60 text-xs leading-loose">篆隸 · 集字</p>
+                </div>
+                <div>
+                    <h2 class="entry-title mb-4">《百寿图》一字百二十写</h2>
+                    <p class="entry-sum">同一个「寿」字写出百余种体态，于重复中见变化，是功夫也是耐心。</p>
+                    <p class="entry-tag mt-5">#顶纸涩行</p>
+                </div>
+            </article>
+
+            <article class="entry scroll-reveal">
+                <div class="entry-head">
+                    <span class="entry-idx">05</span>
+                    <span class="ds-seal">空海 · 入唐</span>
+                    <p class="text-silver/60 text-xs leading-loose">行書 · 信札</p>
+                </div>
+                <div>
+                    <h2 class="entry-title mb-4">《风信帖》渡海传去的笔底风流</h2>
+                    <p class="entry-sum">唐人笔法经入唐僧侣东传，信札里的洒脱与渊源，仍是中日书史的一段佳话。</p>
+                    <p class="entry-tag mt-5">#顶纸涩行</p>
+                </div>
+            </article>
+
+            <article class="entry scroll-reveal">
+                <div class="entry-head">
+                    <span class="entry-idx">06</span>
+                    <span class="ds-seal">井上有一 · 現當代</span>
+                    <p class="text-silver/60 text-xs leading-loose">少字數 · 墨象</p>
+                </div>
+                <div>
+                    <h2 class="entry-title mb-4">《贫》一字极简的东方书写</h2>
+                    <p class="entry-sum">一个大字，黑白相生，把情绪与力量压进极简的笔墨里，照见当代书写的另一种可能。</p>
+                    <p class="entry-tag mt-5">#顶纸涩行</p>
+                </div>
+            </article>
+
+            <p class="text-silver/60 text-xs mt-8 leading-relaxed">帖目详情与繁体释文，随公众号推文陆续补入；此处仅作栏目选目展示。</p>
+        </div>
+    </main>
+
+    <!-- 版权说明（固定原文） -->
+    <section class="px-6 pb-12">
+        <div class="max-w-5xl mx-auto text-xs text-silver/80 leading-loose border-t border-line pt-6">
+            <p>版权说明：本平台以传播书法知识为宗旨，旨在分享传播。文章为个人观点，图片网络素材无从查证作者，若文章中的图片内容、美术、摄影等作品涉及您的版权问题，请您及时与我私信联系，我们将在第一时间删除内容！</p>
+        </div>
+    </section>
+
+    <!-- 关注 -->
+    <section class="px-6 pb-24">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-12 gap-8 items-center scroll-reveal border border-line p-8 md:p-12">
+            <div class="md:col-span-8">
+                <p class="entry-tag mb-4">FOLLOW</p>
+                <h2 class="display-title display-lg mb-4">关注「顶纸涩行」</h2>
+                <p class="text-silver leading-loose">更多书法推文与法帖释文，发布于顶纸涩行公众号与小红书。此处预留公众号二维码位置。</p>
+            </div>
+            <div class="md:col-span-4 md:justify-self-end">
+                <div class="w-32 h-32 img-placeholder flex items-center justify-center text-silver text-xs">二维码占位</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 px-6 border-t border-line">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div>
+                <p class="text-lg tracking-[0.2em] mb-2 text-paper">顶纸涩行</p>
+                <p class="text-silver text-xs">© 2026 徐勇 YOUNGs 版权所有</p>
+            </div>
+            <div class="flex gap-8 text-sm text-silver">
+                <a href="index.html" class="hover:text-gold">造境计划</a>
+                <a href="contact.html" class="hover:text-gold">联系</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

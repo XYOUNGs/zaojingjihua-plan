@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品案例 | 造境计划 CREATE REALMS</title>
+    <meta name="description" content="造境计划作品案例：落地展馆项目与 AI 创意实验室概念研究，以瀑布流方式陈列，点击进入项目详情。">
+    <meta name="keywords" content="造境计划,徐勇,展览设计师,展厅设计案例,博物馆展陈,企业展厅,主题展馆,数字装置艺术">
+    <meta property="og:title" content="作品案例 | 造境计划 CREATE REALMS">
+    <meta property="og:description" content="落地展馆项目与 AI 创意实验室概念研究，一案一图，瀑布流陈列。">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23171A1D'/%3E%3Ctext x='16' y='22' font-size='18' fill='%23A47D52' text-anchor='middle'%3E境%3C/text%3E%3C/svg%3E">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { ink: 'var(--bg)', paper: 'var(--text)', silver: 'var(--text-soft)', gold: 'var(--gold)' },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'system-ui', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased">
+
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <a href="index.html" class="text-lg font-light tracking-[0.2em]">造境计划 <span class="text-gold text-xs">CREATE REALMS</span></a>
+            <div class="hidden md:flex items-center gap-9 text-sm tracking-wider">
+                <a href="index.html" class="nav-link hover:text-gold transition-colors">首页</a>
+                <a href="works.html" class="nav-link active text-gold">作品案例</a>
+                <a href="designers.html" class="nav-link hover:text-gold transition-colors">明星造境师</a>
+                <a href="articles.html" class="nav-link hover:text-gold transition-colors">造境观点</a>
+                <a href="dingshi.html" class="nav-link hover:text-gold transition-colors">顶纸涩行</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="切换主题"></button>
+            </div>
+            <div class="md:hidden flex items-center gap-3">
+                <button class="theme-toggle" aria-label="切换主题"></button>
+                <button id="menu-toggle" class="text-silver" aria-label="菜单">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden px-6 pb-5 flex flex-col gap-4 text-sm tracking-wider bg-soft">
+            <a href="index.html" class="hover:text-gold">首页</a>
+            <a href="works.html" class="text-gold">作品案例</a>
+            <a href="designers.html" class="hover:text-gold">明星造境师</a>
+            <a href="articles.html" class="hover:text-gold">造境观点</a>
+            <a href="dingshi.html" class="hover:text-gold">顶纸涩行</a>
+        </div>
+    </nav>
+
+    <header class="pt-32 md:pt-40 pb-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="eyebrow mb-7 fade-in-up">WORKS · 06 PROJECTS</div>
+            <h1 class="display-title display-xl mb-8 fade-in-up">作品案例</h1>
+            <div class="grid md:grid-cols-12 gap-8 items-end">
+                <p class="md:col-span-6 text-silver leading-loose max-w-xl">
+                    一案一图，按尺度错落陈列。前三项为已落地工程，后三项为 AI 创意实验室的概念研究；概念项只呈现方向与叙事，不含施工图与工程清单。
+                </p>
+                <div class="md:col-span-6 md:justify-self-end">
+                    <div class="filter-row" aria-label="作品分类">
+                        <button class="chip is-on" data-filter="all">全部</button>
+                        <button class="chip" data-filter="built">落地项目</button>
+                        <button class="chip" data-filter="concept">概念研究</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="px-6 pb-24">
+        <div class="max-w-7xl mx-auto">
+            <div class="masonry" id="wall">
+
+                <a href="project.html?id=1" class="pin scroll-reveal" data-category="built">
+                    <div class="pin-media r-4x5"><span class="pin-idx">01</span></div>
+                    <div class="pin-cap">
+                        <p class="entry-tag mb-2">落地项目 · 工业遗产</p>
+                        <h3 class="mb-2">灵石煤炭主题馆</h3>
+                        <p class="text-silver leading-relaxed">从开采历史到产业转型，把工业遗存与当代展示语言并置成一条可阅读的参观动线。</p>
+                    </div>
+                </a>
+
+                <a href="project.html?id=2" class="pin scroll-reveal" data-category="built" style="transition-delay:0.05s">
+                    <div class="pin-media r-3x2"><span class="pin-idx">02</span></div>
+                    <div class="pin-cap">
+                        <p class="entry-tag mb-2">落地项目 · 企业展厅</p>
+                        <h3 class="mb-2">国电科环集团展厅</h3>
+                        <p class="text-silver leading-relaxed">企业信息分层梳理，由总览到专题，多媒体承担关键板块的可视化。</p>
+                    </div>
+                </a>
+
+                <a href="project.html?id=3" class="pin scroll-reveal" data-category="built" style="transition-delay:0.1s">
+                    <div class="pin-media r-3x4"><span class="pin-idx">03</span></div>
+                    <div class="pin-cap">
+                        <p class="entry-tag mb-2">落地项目 · 农业文旅</p>
+                        <h3 class="mb-2">灵石蜂蜜馆</h3>
+                        <p class="text-silver leading-relaxed">以蜂蜜产业与地方风物为线索，把工艺与自然知识转译为可体验的主题空间。</p>
+                    </div>
+                </a>
+
+                <a href="project.html?id=4" class="pin scroll-reveal" data-category="concept">
+                    <div class="pin-media r-4x3"><span class="pin-idx">04</span></div>
+                    <div class="pin-cap">
+                        <p class="entry-tag mb-2">概念研究 · 光影装置</p>
+                        <h3 class="mb-2">生成式光影装置构想</h3>
+                        <p class="text-silver leading-relaxed">主题数据驱动光影影像，观众在场与画面实时呼应，探索生成式视觉的边界。</p>
+                    </div>
+                </a>
+
+                <a href="project.html?id=5" class="pin scroll-reveal" data-category="concept" style="transition-delay:0.05s">
+                    <div class="pin-media r-1x1"><span class="pin-idx">05</span></div>
+                    <div class="pin-cap">
+                        <p class="entry-tag mb-2">概念研究 · 传感交互</p>
+                        <h3 class="mb-2">传感器交互空间原型</h3>
+                        <p class="text-silver leading-relaxed">体感与位置传感触发空间反馈，克制的交互语言，不让技术打断叙事。</p>
+                    </div>
+                </a>
+
+                <a href="project.html?id=6" class="pin scroll-reveal" data-category="concept" style="transition-delay:0.1s">
+                    <div class="pin-media r-2x3"><span class="pin-idx">06</span></div>
+                    <div class="pin-cap">
+                        <p class="entry-tag mb-2">概念研究 · AI 策展</p>
+                        <h3 class="mb-2">AI 策展叙事推演</h3>
+                        <p class="text-silver leading-relaxed">AI 辅助主题提炼与动线推演，文化判断与创意方向仍由人把关。</p>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between gap-5 mt-14 pt-6 border-t border-line text-xs text-silver/80">
+                <p>04—06 为 AI 创意实验室概念研究，属创意构想，非已落地工程。</p>
+                <p>项目实景与效果图将陆续补入，当前为版式占位。</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-16 px-6 border-t border-line">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div>
+                <p class="text-lg tracking-[0.2em] mb-2">造境计划 CREATE REALMS</p>
+                <p class="text-silver text-xs">© 2026 徐勇 YOUNGs 版权所有 · 概念研究非落地工程</p>
+            </div>
+            <div class="flex gap-8 text-sm text-silver">
+                <a href="designers.html" class="hover:text-gold">明星造境师</a>
+                <a href="articles.html" class="hover:text-gold">造境观点</a>
+                <a href="contact.html" class="hover:text-gold">联系</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const chips = document.querySelectorAll('.chip');
+        const pins = document.querySelectorAll('#wall .pin');
+        chips.forEach((chip) => {
+            chip.addEventListener('click', () => {
+                chips.forEach((c) => c.classList.remove('is-on'));
+                chip.classList.add('is-on');
+                const f = chip.getAttribute('data-filter');
+                pins.forEach((pin) => {
+                    const cat = pin.getAttribute('data-category');
+                    pin.style.display = (f === 'all' || cat === f) ? '' : 'none';
+                });
+            });
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>

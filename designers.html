@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>明星造境师 | 造境计划 CREATE REALMS</title>
+    <meta name="description" content="造境计划明星造境师团队：展览、舞美、装置、博物馆、展厅、品牌设计领域的创意者，各自展示专业方向与代表项目。">
+    <meta name="keywords" content="造境计划,明星造境师,造境师,展览设计师,舞美设计,装置设计,博物馆设计,展厅设计,品牌设计">
+    <meta property="og:title" content="明星造境师 | 造境计划 CREATE REALMS">
+    <meta property="og:description" content="一群以空间与影像造境的创意者，各自带着专业方向与代表项目。">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23171A1D'/%3E%3Ctext x='16' y='22' font-size='18' fill='%23A47D52' text-anchor='middle'%3E境%3C/text%3E%3C/svg%3E">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { ink: 'var(--bg)', paper: 'var(--text)', silver: 'var(--text-soft)', gold: 'var(--gold)' },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'system-ui', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased">
+
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <a href="index.html" class="text-lg font-light tracking-[0.2em]">造境计划 <span class="text-gold text-xs">CREATE REALMS</span></a>
+            <div class="hidden md:flex items-center gap-9 text-sm tracking-wider">
+                <a href="index.html" class="nav-link hover:text-gold transition-colors">首页</a>
+                <a href="works.html" class="nav-link hover:text-gold transition-colors">作品案例</a>
+                <a href="designers.html" class="nav-link active text-gold">明星造境师</a>
+                <a href="articles.html" class="nav-link hover:text-gold transition-colors">造境观点</a>
+                <a href="dingshi.html" class="nav-link hover:text-gold transition-colors">顶纸涩行</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="切换主题"></button>
+            </div>
+            <div class="md:hidden flex items-center gap-3">
+                <button class="theme-toggle" aria-label="切换主题"></button>
+                <button id="menu-toggle" class="text-silver" aria-label="菜单">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden px-6 pb-5 flex flex-col gap-4 text-sm tracking-wider bg-soft">
+            <a href="index.html" class="hover:text-gold">首页</a>
+            <a href="works.html" class="hover:text-gold">作品案例</a>
+            <a href="designers.html" class="text-gold">明星造境师</a>
+            <a href="articles.html" class="hover:text-gold">造境观点</a>
+            <a href="dingshi.html" class="hover:text-gold">顶纸涩行</a>
+        </div>
+    </nav>
+
+    <header class="pt-32 md:pt-40 pb-14 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="eyebrow mb-7 fade-in-up">TEAM · 04 DESIGNERS</div>
+            <h1 class="display-title display-xl mb-8 fade-in-up">明星造境师</h1>
+            <div class="grid md:grid-cols-12 gap-8">
+                <p class="md:col-span-7 text-silver leading-loose">
+                    造境计划由徐勇发起。可造境的不止一人——展览、舞美、装置、博物馆、展厅、品牌设计，各自带着一门手艺，在同一套叙事里彼此补位。
+                </p>
+                <p class="md:col-span-5 text-silver/70 text-xs leading-loose">
+                    注：本页人物形象由 AI 生成示意、项目为版式演示示例；正式上线后替换为真实造境师资料、头像与实景作品。
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- 领衔造境师 -->
+    <section class="px-6 pb-16">
+        <div class="max-w-7xl mx-auto">
+            <div class="hairline mb-10"></div>
+            <a href="designer.html?id=1" class="team-feature group scroll-reveal">
+                <div class="team-portrait r-4x5">
+                    <img src="images/avatar-lin.jpg" alt="林叙白示意头像" loading="lazy">
+                </div>
+                <div>
+                    <p class="entry-idx mb-4">01 / LEAD DESIGNER</p>
+                    <h2 class="team-name mb-2">林叙白</h2>
+                    <p class="team-role mb-5">空间展陈设计师</p>
+                    <p class="text-silver leading-loose mb-6 max-w-lg">十余年博物馆与企业展厅空间设计，关注叙事动线与材料质感，擅长把地方文化转译为可进入、可停留的空间序列。从主题立意到展线节奏，始终围绕观众如何理解一段文化内容来组织空间。</p>
+                    <div class="flex flex-wrap gap-2 mb-7">
+                        <span class="tag">博物馆设计</span>
+                        <span class="tag">展厅设计</span>
+                        <span class="tag">展览设计</span>
+                    </div>
+                    <p class="entry-tag mb-3">代表项目</p>
+                    <div class="space-y-0">
+                        <span class="team-proj">地方史博物馆叙事空间</span>
+                        <span class="team-proj">能源集团企业展厅</span>
+                        <span class="team-proj">非遗主题展陈空间</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- 其他造境师 -->
+    <section class="px-6 pb-24">
+        <div class="max-w-7xl mx-auto">
+            <div class="hairline mb-12"></div>
+            <div class="team-list">
+
+                <a href="designer.html?id=2" class="team-card scroll-reveal">
+                    <div class="team-portrait">
+                        <img src="images/avatar-chen.jpg" alt="陈既明示意头像" loading="lazy">
+                    </div>
+                    <div class="pt-4">
+                        <p class="entry-idx mb-3">02</p>
+                        <h3 class="team-name" style="font-size:1.25rem">陈既明</h3>
+                        <p class="team-role mb-3">装置与交互艺术家</p>
+                        <p class="text-silver text-sm leading-relaxed mb-4">以光影、传感与声音为媒介，探索观众身体与空间的互动关系，强调克制的诗意而非技术堆叠。</p>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="tag">装置设计</span>
+                            <span class="tag">展览设计</span>
+                        </div>
+                        <span class="team-proj">沉浸式光影传感装置</span>
+                        <span class="team-proj">声景交互回廊</span>
+                    </div>
+                </a>
+
+                <a href="designer.html?id=3" class="team-card scroll-reveal" style="transition-delay:0.06s">
+                    <div class="team-portrait">
+                        <img src="images/avatar-su.jpg" alt="苏晚示意头像" loading="lazy">
+                    </div>
+                    <div class="pt-4">
+                        <p class="entry-idx mb-3">03</p>
+                        <h3 class="team-name" style="font-size:1.25rem">苏晚</h3>
+                        <p class="team-role mb-3">舞美与视觉设计师</p>
+                        <p class="text-silver text-sm leading-relaxed mb-4">跨足舞台视觉与品牌展陈，以平面、色彩与道具结构建立统一的现场气质，让视觉语言与空间叙事彼此支撑。</p>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="tag">舞美设计</span>
+                            <span class="tag">品牌设计</span>
+                        </div>
+                        <span class="team-proj">戏剧舞台美术设计</span>
+                        <span class="team-proj">品牌发布会视觉系统</span>
+                    </div>
+                </a>
+
+                <a href="designer.html?id=4" class="team-card scroll-reveal" style="transition-delay:0.12s">
+                    <div class="team-portrait">
+                        <img src="images/avatar-zhao.jpg" alt="赵砚示意头像" loading="lazy">
+                    </div>
+                    <div class="pt-4">
+                        <p class="entry-idx mb-3">04</p>
+                        <h3 class="team-name" style="font-size:1.25rem">赵砚</h3>
+                        <p class="team-role mb-3">数字内容设计师</p>
+                        <p class="text-silver text-sm leading-relaxed mb-4">专注数字影片、多媒体内容与生成式影像，在技术实现与文化叙事之间承担衔接，把控多屏内容的节奏与画面。</p>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="tag">展厅设计</span>
+                            <span class="tag">装置设计</span>
+                        </div>
+                        <span class="team-proj">企业形象数字影片</span>
+                        <span class="team-proj">展厅多媒体内容包</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 加入 -->
+    <section class="px-6 pb-24">
+        <div class="max-w-7xl mx-auto border border-line p-8 md:p-12 scroll-reveal">
+            <div class="grid md:grid-cols-12 gap-8 items-end">
+                <div class="md:col-span-7">
+                    <p class="entry-tag mb-4">JOIN THE REALM</p>
+                    <h2 class="display-title display-lg mb-5">成为造境师</h2>
+                    <p class="text-silver leading-loose">如果你也在展览、舞美、装置、影像或品牌设计里做事，愿意把作品放进同一个叙事里被看见，欢迎来信。资料审核通过后，作品会以独立的造境师主页上线。</p>
+                </div>
+                <div class="md:col-span-5 md:text-right">
+                    <a href="mailto:215772197@qq.com" class="inline-block px-8 py-3 border border-gold text-gold hover:bg-gold hover:text-ink transition-all duration-300 tracking-wider text-sm">写信申请</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 px-6 border-t border-line">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div>
+                <p class="text-lg tracking-[0.2em] mb-2">造境计划 CREATE REALMS</p>
+                <p class="text-silver text-xs">© 2026 徐勇 YOUNGs 版权所有 · 人物形象 AI 生成示意</p>
+            </div>
+            <div class="flex gap-8 text-sm text-silver">
+                <a href="works.html" class="hover:text-gold">作品</a>
+                <a href="articles.html" class="hover:text-gold">观点</a>
+                <a href="contact.html" class="hover:text-gold">联系</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目详情 | 造境计划 CREATE REALMS</title>
+    <meta name="description" content="造境计划展览展陈项目详情：落地展馆与 AI 创意实验室概念研究，图文结合呈现项目方向、叙事与设计要点。">
+    <meta name="keywords" content="造境计划,展览设计案例,展厅设计,博物馆展陈,企业展厅,主题展馆,数字装置艺术">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23171A1D'/%3E%3Ctext x='16' y='22' font-size='18' fill='%23A47D52' text-anchor='middle'%3E境%3C/text%3E%3C/svg%3E">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { ink: 'var(--bg)', paper: 'var(--text)', silver: 'var(--text-soft)', gold: 'var(--gold)' },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'system-ui', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased">
+
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <a href="index.html" class="text-lg font-light tracking-[0.2em]">造境计划 <span class="text-gold text-xs">CREATE REALMS</span></a>
+            <div class="hidden md:flex items-center gap-9 text-sm tracking-wider">
+                <a href="index.html" class="nav-link hover:text-gold transition-colors">首页</a>
+                <a href="works.html" class="nav-link active text-gold">作品案例</a>
+                <a href="designers.html" class="nav-link hover:text-gold transition-colors">明星造境师</a>
+                <a href="articles.html" class="nav-link hover:text-gold transition-colors">造境观点</a>
+                <a href="dingshi.html" class="nav-link hover:text-gold transition-colors">顶纸涩行</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="切换主题"></button>
+            </div>
+            <div class="md:hidden flex items-center gap-3">
+                <button class="theme-toggle" aria-label="切换主题"></button>
+                <button id="menu-toggle" class="text-silver" aria-label="菜单">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden px-6 pb-5 flex flex-col gap-4 text-sm tracking-wider bg-soft">
+            <a href="index.html" class="hover:text-gold">首页</a>
+            <a href="works.html" class="text-gold">作品案例</a>
+            <a href="designers.html" class="hover:text-gold">明星造境师</a>
+            <a href="articles.html" class="hover:text-gold">造境观点</a>
+            <a href="dingshi.html" class="hover:text-gold">顶纸涩行</a>
+        </div>
+    </nav>
+
+    <header class="pt-28 pb-10 px-6">
+        <div class="max-w-7xl mx-auto">
+            <a href="works.html" class="text-silver text-sm hover:text-gold transition-colors">← 返回作品案例</a>
+        </div>
+    </header>
+
+    <section class="px-6 pb-24">
+        <div class="max-w-7xl mx-auto">
+
+            <!-- 主视觉大图 -->
+            <div id="hero" class="aspect-[21/9] img-placeholder mb-10 flex items-center justify-center text-silver text-sm">项目主视觉占位</div>
+
+            <!-- 标题与状态 -->
+            <div class="mb-8">
+                <p id="status" class="text-gold text-xs tracking-widest mb-3"></p>
+                <h1 id="title" class="text-3xl md:text-5xl font-light tracking-wider mb-4"></h1>
+                <p id="summary" class="text-silver max-w-3xl leading-loose"></p>
+            </div>
+
+            <!-- 项目信息条 -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 border-y border-line py-6 mb-12">
+                <div>
+                    <p class="text-xs text-silver/70 tracking-widest mb-2">项目类型</p>
+                    <p id="field-type" class="text-sm"></p>
+                </div>
+                <div>
+                    <p class="text-xs text-silver/70 tracking-widest mb-2">方向</p>
+                    <p id="field-direction" class="text-sm"></p>
+                </div>
+                <div>
+                    <p class="text-xs text-silver/70 tracking-widest mb-2">标签</p>
+                    <p id="field-tags" class="text-sm"></p>
+                </div>
+                <div>
+                    <p class="text-xs text-silver/70 tracking-widest mb-2">阶段</p>
+                    <p id="field-stage" class="text-sm"></p>
+                </div>
+            </div>
+
+            <!-- 概述与要点 -->
+            <div class="grid md:grid-cols-3 gap-10 mb-16">
+                <div class="md:col-span-2">
+                    <h2 class="text-xl tracking-wider mb-5">项目概述</h2>
+                    <p id="overview" class="text-silver leading-loose mb-5"></p>
+                </div>
+                <div>
+                    <h2 class="text-xl tracking-wider mb-5">设计要点</h2>
+                    <ul id="points" class="text-silver text-sm space-y-3"></ul>
+                </div>
+            </div>
+
+            <!-- 图廊 -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="aspect-[4/3] img-placeholder flex items-center justify-center text-silver text-xs">场景图占位</div>
+                <div class="aspect-[4/3] img-placeholder flex items-center justify-center text-silver text-xs">场景图占位</div>
+            </div>
+
+            <!-- 概念标注 -->
+            <p id="concept-note" class="text-silver/70 text-xs mt-10 leading-relaxed"></p>
+
+            <!-- 上一 / 下一项目 -->
+            <div class="flex justify-between mt-16 pt-8 border-t border-line text-sm">
+                <a id="prev" href="works.html" class="text-silver hover:text-gold transition-colors">← 上一项目</a>
+                <a id="next" href="works.html" class="text-silver hover:text-gold transition-colors">下一项目 →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 px-6 border-t border-line">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div>
+                <p class="text-lg tracking-[0.2em] mb-2">造境计划 CREATE REALMS</p>
+                <p class="text-silver text-xs">© 2026 徐勇 YOUNGs 版权所有 · 概念研究非落地工程</p>
+            </div>
+            <div class="flex gap-8 text-sm text-silver">
+                <a href="designers.html" class="hover:text-gold">造境师</a>
+                <a href="articles.html" class="hover:text-gold">观点</a>
+                <a href="contact.html" class="hover:text-gold">联系</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const PROJECTS = [
+            {
+                id: 1,
+                title: "灵石煤炭主题馆",
+                status: "落地项目",
+                stage: "已落地",
+                type: "工业遗产主题馆",
+                direction: "叙事空间 · 沉浸式体验",
+                tags: "工业遗产 / 地方文化 / 展陈叙事",
+                summary: "围绕煤炭工业遗产与地方记忆，梳理从开采历史到产业转型的叙事主线。",
+                overview: "围绕煤炭工业遗产与地方记忆，梳理从开采历史到产业转型的叙事主线，把工业场景、设备遗存与当代展示语言结合，形成可进入、可阅读的参观动线。空间节奏随叙事情绪起伏，让观众在展品与场景之间理解一段地方产业的来路与去向。",
+                points: [
+                    "以时间脉络组织展线，串联开采、生产与转型阶段",
+                    "工业遗存与影像、多媒体展项相互配合",
+                    "空间节奏配合叙事情绪，控制参观停留与转折"
+                ],
+                conceptNote: ""
+            },
+            {
+                id: 2,
+                title: "国电科环集团展厅",
+                status: "落地项目",
+                stage: "已落地",
+                type: "企业展厅",
+                direction: "企业叙事 · 数字多媒体",
+                tags: "企业展厅 / 科技展示 / 数字多媒体",
+                summary: "围绕集团产业脉络与核心能力，搭建企业形象展厅，以分区叙事呈现发展历程与技术实力。",
+                overview: "围绕集团产业脉络与核心能力，搭建企业形象展厅，以分区叙事呈现发展历程、技术实力与未来方向。多媒体展项服务于企业信息传达，在有限空间内把专业内容梳理成清晰、可理解的参观层次，避免信息堆叠。",
+                points: [
+                    "企业信息分层梳理，形成由总览到专题的阅读顺序",
+                    "展项布置配合空间动线，重点内容设置独立节点",
+                    "数字多媒体承担关键板块的可视化呈现"
+                ],
+                conceptNote: ""
+            },
+            {
+                id: 3,
+                title: "灵石蜂蜜馆",
+                status: "落地项目",
+                stage: "已落地",
+                type: "农业文旅主题展馆",
+                direction: "文化叙事 · 主题空间",
+                tags: "农业文旅 / 主题展馆 / 文化叙事",
+                summary: "以蜂蜜产业与地方风物为线索，把产品、工艺与自然知识转译为可体验的主题空间。",
+                overview: "以蜂蜜产业与地方风物为线索，把产品、工艺与自然知识转译为可体验的主题空间，兼顾文化叙事与参观趣味。从养蜂源流、生产工艺到地方物产，空间气质贴合主题，让参观过程既有信息层次，也保留轻松的体验感。",
+                points: [
+                    "地方风物提炼为清晰的展览主线",
+                    "产品与工艺环节做可视化、可阅读的呈现",
+                    "空间色彩与材质语言贴合农业文旅主题"
+                ],
+                conceptNote: ""
+            },
+            {
+                id: 4,
+                title: "生成式光影装置构想",
+                status: "概念研究 · 非落地工程",
+                stage: "概念原型",
+                type: "数字装置 / 光影研究",
+                direction: "生成影像 · 现场交互",
+                tags: "概念研究 / 生成式影像 / 光影装置",
+                summary: "以主题数据驱动光影影像，观众在场与画面实时呼应，探索生成式视觉的表达边界。",
+                overview: "以主题数据驱动光影影像，观众在场与画面实时呼应，探索生成式视觉在展陈空间中的表达边界。该方向处于概念原型阶段，重点研究数据到视觉的转化逻辑、现场光影氛围，以及观众位置与画面反馈的关系，尚未形成落地工程。",
+                points: [
+                    "梳理主题数据到光影画面的转化路径",
+                    "研究现场光影与观众位置、动作的反馈方式",
+                    "概念原型验证视觉氛围与交互可行性"
+                ],
+                conceptNote: "本项目为 AI 实验室概念研究，属创意构想，非已落地工程；不代表实际施工方案。"
+            },
+            {
+                id: 5,
+                title: "传感器交互空间原型",
+                status: "概念研究 · 非落地工程",
+                stage: "概念原型",
+                type: "交互装置原型",
+                direction: "体感交互 · 空间反馈",
+                tags: "概念研究 / 传感交互 / 空间原型",
+                summary: "以体感与位置传感触发空间反馈，探索克制自然的交互语言，避免技术炫示。",
+                overview: "以体感与位置传感触发空间反馈，探索克制自然的交互语言，避免技术炫示，让反馈服务于现场情绪。原型阶段重点验证传感方式与空间尺度的匹配、反馈节奏的自然度，以及在真实展陈条件下的稳定性与可维护性。",
+                points: [
+                    "传感方式与空间尺度、观众动线相互匹配",
+                    "反馈节奏力求自然，不打断参观叙事",
+                    "原型阶段评估交互稳定性与后续落地条件"
+                ],
+                conceptNote: "本项目为 AI 实验室概念研究，属创意构想，非已落地工程；不代表实际施工方案。"
+            },
+            {
+                id: 6,
+                title: "AI 策展叙事推演",
+                status: "概念研究 · 非落地工程",
+                stage: "方法研究",
+                type: "AI 辅助策展研究",
+                direction: "叙事结构 · 动线推演",
+                tags: "概念研究 / AI 策展 / 叙事推演",
+                summary: "以 AI 辅助主题提炼、叙事结构与动线推演，人主导最终判断与创意方向。",
+                overview: "以 AI 辅助主题提炼、叙事结构与动线推演，人主导最终判断与创意方向，AI 作为效率与发散工具。该方向沉淀可复用的前期工作流：从素材梳理、主题假设到展线结构草案，再由策展人完成文化判断与方案深化，形成人机协作的策展方法。",
+                points: [
+                    "AI 参与前期素材发散与叙事结构梳理",
+                    "人的文化判断与创意方向承担最终把关",
+                    "方法沉淀为可复用的 AI 辅助策展工作流"
+                ],
+                conceptNote: "本项目为 AI 实验室概念研究，属方法构想，非已落地工程；不代表实际施工方案。"
+            }
+        ];
+
+        const params = new URLSearchParams(window.location.search);
+        const id = parseInt(params.get("id"), 10);
+        const index = PROJECTS.findIndex((p) => p.id === id);
+        const proj = PROJECTS[index] || PROJECTS[0];
+
+        document.getElementById("title").textContent = proj.title;
+        document.getElementById("status").textContent = proj.status;
+        document.getElementById("summary").textContent = proj.summary;
+        document.getElementById("field-type").textContent = proj.type;
+        document.getElementById("field-direction").textContent = proj.direction;
+        document.getElementById("field-tags").textContent = proj.tags;
+        document.getElementById("field-stage").textContent = proj.stage;
+        document.getElementById("overview").textContent = proj.overview;
+
+        const pointsEl = document.getElementById("points");
+        proj.points.forEach((p) => {
+            const li = document.createElement("li");
+            li.innerHTML = '<span class="text-gold mr-2">·</span>';
+            li.appendChild(document.createTextNode(p));
+            pointsEl.appendChild(li);
+        });
+
+        const noteEl = document.getElementById("concept-note");
+        noteEl.textContent = proj.conceptNote || "项目实景与效果图将在补充素材后更新；当前封面与场景图为版式占位。";
+
+        const prev = PROJECTS[(index - 1 + PROJECTS.length) % PROJECTS.length];
+        const next = PROJECTS[(index + 1) % PROJECTS.length];
+        document.getElementById("prev").href = "project.html?id=" + prev.id;
+        document.getElementById("next").href = "project.html?id=" + next.id;
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>

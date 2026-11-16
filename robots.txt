@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zaojing-plan.vercel.app/sitemap.xml

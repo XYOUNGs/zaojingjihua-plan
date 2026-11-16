@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>造境师详情 | 造境计划 CREATE REALMS</title>
+    <meta name="description" content="造境计划造境师个人主页：专业方向、职业介绍与代表作品。">
+    <meta name="keywords" content="造境计划,造境师,展览设计,装置设计,舞美设计,展厅设计,品牌设计">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23171A1D'/%3E%3Ctext x='16' y='22' font-size='18' fill='%23A47D52' text-anchor='middle'%3E境%3C/text%3E%3C/svg%3E">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { ink: 'var(--bg)', paper: 'var(--text)', silver: 'var(--text-soft)', gold: 'var(--gold)' },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'system-ui', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased">
+
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <a href="index.html" class="text-lg font-light tracking-[0.2em]">造境计划 <span class="text-gold text-xs">CREATE REALMS</span></a>
+            <div class="hidden md:flex items-center gap-9 text-sm tracking-wider">
+                <a href="index.html" class="nav-link hover:text-gold transition-colors">首页</a>
+                <a href="works.html" class="nav-link hover:text-gold transition-colors">作品案例</a>
+                <a href="designers.html" class="nav-link active text-gold">明星造境师</a>
+                <a href="articles.html" class="nav-link hover:text-gold transition-colors">造境观点</a>
+                <a href="dingshi.html" class="nav-link hover:text-gold transition-colors">顶纸涩行</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="切换主题"></button>
+            </div>
+            <div class="md:hidden flex items-center gap-3">
+                <button class="theme-toggle" aria-label="切换主题"></button>
+                <button id="menu-toggle" class="text-silver" aria-label="菜单">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden px-6 pb-5 flex flex-col gap-4 text-sm tracking-wider bg-soft">
+            <a href="index.html" class="hover:text-gold">首页</a>
+            <a href="works.html" class="hover:text-gold">作品案例</a>
+            <a href="designers.html" class="text-gold">明星造境师</a>
+            <a href="articles.html" class="hover:text-gold">造境观点</a>
+            <a href="dingshi.html" class="hover:text-gold">顶纸涩行</a>
+        </div>
+    </nav>
+
+    <header class="pt-36 pb-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <a href="designers.html" class="text-silver text-sm hover:text-gold transition-colors">← 返回造境师</a>
+        </div>
+    </header>
+
+    <section class="px-6 pb-16">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row gap-10 mb-16">
+                <img id="avatar" class="avatar-img" style="width:128px;height:128px;border-radius:20px" src="" alt="造境师示意头像">
+                <div class="flex-1">
+                    <h1 id="name" class="text-3xl md:text-4xl font-light tracking-wider mb-2"></h1>
+                    <p id="title" class="text-gold text-sm tracking-widest mb-4"></p>
+                    <div id="tags" class="flex flex-wrap gap-2 mb-6"></div>
+                    <p id="bio" class="text-silver leading-loose max-w-3xl"></p>
+                </div>
+            </div>
+
+            <h2 class="text-2xl font-light tracking-wider mb-8">代表作品</h2>
+            <div id="works" class="grid md:grid-cols-3 gap-8"></div>
+
+            <p class="text-silver/70 text-xs mt-12 leading-relaxed">注：本页人物形象与作品为版式演示示例，头像由 AI 生成示意；正式上线后替换为真实造境师资料、头像与实景作品图。</p>
+        </div>
+    </section>
+
+    <footer class="py-16 px-6 border-t border-line">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div>
+                <p class="text-lg tracking-[0.2em] mb-2">造境计划 CREATE REALMS</p>
+                <p class="text-silver text-xs">© 2026 徐勇 YOUNGs 版权所有 · 未经书面许可禁止复制商用</p>
+            </div>
+            <div class="flex gap-8 text-sm text-silver">
+                <a href="works.html" class="hover:text-gold">作品</a>
+                <a href="designers.html" class="hover:text-gold">造境师</a>
+                <a href="contact.html" class="hover:text-gold">联系</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const DESIGNERS = [
+            {
+                id: 1,
+                name: "林叙白",
+                title: "空间展陈设计师",
+                tags: ["博物馆设计", "展厅设计", "展览设计"],
+                avatar: "images/avatar-lin.jpg",
+                bio: "十余年博物馆与企业展厅空间设计，关注叙事动线与材料质感，擅长把地方文化转译为可进入、可停留的空间序列。从主题立意到展线节奏，始终围绕观众如何理解一段文化内容来组织空间。",
+                works: [
+                    { title: "地方史博物馆叙事空间", desc: "以年代脉络组织展线，让观众沿时间进入地方记忆，平衡文物展示与阅读节奏。" },
+                    { title: "能源集团企业展厅", desc: "围绕产业主题梳理空间节奏与展陈序列，把发展历程、核心能力与未来方向分层呈现。" },
+                    { title: "非遗主题展陈空间", desc: "把传统工艺的工序与器物转译为可阅读、可停留的展项，兼顾手作温度与空间秩序。" }
+                ]
+            },
+            {
+                id: 2,
+                name: "陈既明",
+                title: "装置与交互艺术家",
+                tags: ["装置设计", "展览设计"],
+                avatar: "images/avatar-chen.jpg",
+                bio: "以光影、传感与声音为媒介，探索观众身体与空间的互动关系。作品强调克制的诗意，而非技术的堆叠与炫示；每一处感应与反馈都服务于现场情绪与叙事。",
+                works: [
+                    { title: "沉浸式光影传感装置", desc: "观众动线触发光影变化，形成人与空间之间可反复应答的现场关系。" },
+                    { title: "声景交互回廊", desc: "以环境声与空间层次营造可穿行的听觉场域，声音随位置与动作自然起伏。" },
+                    { title: "生成式影像展项原型", desc: "探索算法影像与现场叙事的结合方式，在可控画面与随机生成之间寻找平衡。" }
+                ]
+            },
+            {
+                id: 3,
+                name: "苏晚",
+                title: "舞美与视觉设计师",
+                tags: ["舞美设计", "品牌设计"],
+                avatar: "images/avatar-su.jpg",
+                bio: "跨足舞台视觉与品牌展陈，擅长以平面视觉、色彩与道具结构建立统一的现场气质。让视觉语言与空间叙事彼此支撑，从主视觉到现场物料保持同一套表达逻辑。",
+                works: [
+                    { title: "戏剧舞台美术设计", desc: "以布景、色彩与道具结构服务舞台叙事，在有限舞台空间里建立层次与焦点。" },
+                    { title: "品牌发布会视觉系统", desc: "统一主视觉、物料与现场陈列语言，使品牌气质在整场活动中连贯一致。" },
+                    { title: "展览导视与平面物料", desc: "梳理展线导视与版面信息层次，让观众在空间中易于辨识方向与内容。" }
+                ]
+            },
+            {
+                id: 4,
+                name: "赵砚",
+                title: "数字内容设计师",
+                tags: ["展厅设计", "装置设计"],
+                avatar: "images/avatar-zhao.jpg",
+                bio: "专注数字影片、多媒体内容与生成式影像，负责展项内容创意与画面呈现。在技术实现与文化叙事之间承担衔接与把控，确保多屏内容的节奏、文案与画面彼此衔接。",
+                works: [
+                    { title: "企业形象数字影片", desc: "提炼品牌叙事，完成画面脚本与内容把控，使影像表达贴合企业气质。" },
+                    { title: "展厅多媒体内容包", desc: "统筹多屏内容的节奏、文案与画面衔接，配合空间动线安排信息密度。" },
+                    { title: "互动影像原型开发", desc: "配合装置逻辑验证影像交互方案，在原型阶段确认反馈方式与视觉效果。" }
+                ]
+            }
+        ];
+
+        const params = new URLSearchParams(window.location.search);
+        const id = parseInt(params.get("id"), 10);
+        const person = DESIGNERS.find((d) => d.id === id) || DESIGNERS[0];
+
+        document.getElementById("avatar").src = person.avatar;
+        document.getElementById("avatar").alt = person.name + "示意头像";
+        document.getElementById("name").textContent = person.name;
+        document.getElementById("title").textContent = person.title;
+        document.getElementById("bio").textContent = person.bio;
+
+        const tagsEl = document.getElementById("tags");
+        person.tags.forEach((t) => {
+            const span = document.createElement("span");
+            span.className = "tag";
+            span.textContent = t;
+            tagsEl.appendChild(span);
+        });
+
+        const worksEl = document.getElementById("works");
+        person.works.forEach((w) => {
+            const card = document.createElement("article");
+            card.className = "ds-card";
+            card.innerHTML =
+                '<div class="aspect-[4/3] img-placeholder mb-4 flex items-center justify-center text-silver text-xs">作品封面占位</div>' +
+                '<h3 class="text-lg font-semibold tracking-wider mb-2"></h3>' +
+                '<p class="text-silver text-sm leading-relaxed"></p>';
+            card.querySelector("h3").textContent = w.title;
+            card.querySelector("p").textContent = w.desc;
+            worksEl.appendChild(card);
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>

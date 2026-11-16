@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服务合作 | 造境计划 CREATE REALMS</title>
+    <meta name="description" content="造境计划服务合作：展馆主题策划、空间概念设计、创意顾问、数字装置艺术定制、AI 展陈工作流与沉浸式体验创意。">
+    <meta name="keywords" content="造境计划,展馆策划,空间概念设计,数字装置定制,创意顾问,展览设计师,徐勇 YOUNGs">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23171A1D'/%3E%3Ctext x='16' y='22' font-size='18' fill='%23A47D52' text-anchor='middle' font-family='serif'%3E境%3C/text%3E%3C/svg%3E">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { ink: 'var(--bg)', paper: 'var(--text)', silver: 'var(--text-soft)', gold: 'var(--gold)' },
+                    fontFamily: { sans: ['"Noto Sans SC"', 'system-ui', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased">
+
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <a href="index.html" class="text-lg font-light tracking-[0.2em]">造境计划 <span class="text-gold text-xs">CREATE REALMS</span></a>
+            <div class="hidden md:flex items-center gap-9 text-sm tracking-wider">
+                <a href="index.html" class="nav-link hover:text-gold transition-colors">首页</a>
+                <a href="works.html" class="nav-link hover:text-gold transition-colors">作品案例</a>
+                <a href="designers.html" class="nav-link hover:text-gold transition-colors">明星造境师</a>
+                <a href="articles.html" class="nav-link hover:text-gold transition-colors">造境观点</a>
+                <a href="dingshi.html" class="nav-link hover:text-gold transition-colors">顶纸涩行</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="切换主题"></button>
+            </div>
+            <div class="md:hidden flex items-center gap-3">
+                <button class="theme-toggle" aria-label="切换主题"></button>
+                <button id="menu-toggle" class="text-silver" aria-label="菜单">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden px-6 pb-5 flex flex-col gap-4 text-sm tracking-wider bg-soft">
+            <a href="index.html" class="hover:text-gold">首页</a>
+            <a href="works.html" class="hover:text-gold">作品案例</a>
+            <a href="designers.html" class="hover:text-gold">明星造境师</a>
+            <a href="articles.html" class="hover:text-gold">造境观点</a>
+            <a href="dingshi.html" class="hover:text-gold">顶纸涩行</a>
+        </div>
+    </nav>
+
+    <header class="pt-36 pb-12 px-6">
+        <div class="max-w-7xl mx-auto fade-in-up">
+            <p class="text-gold text-sm tracking-[0.3em] mb-4">SERVICES & CONTACT</p>
+            <h1 class="text-4xl md:text-5xl font-light tracking-wider mb-6">服务合作</h1>
+            <p class="text-silver max-w-2xl leading-relaxed">面向博物馆、纪念馆、企事业单位展厅与文旅主题展馆，提供从文化叙事到落地把控的创意服务，并探索数字装置与 AI 赋能的展陈新方式。</p>
+        </div>
+    </header>
+
+    <!-- 服务清单 -->
+    <section class="py-16 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
+            <div class="scroll-reveal">
+                <h2 class="text-xl tracking-wider mb-6 text-gold">传统展陈服务</h2>
+                <div class="space-y-5">
+                    <div class="service-card p-6 border border-line">
+                        <h3 class="text-lg mb-2">展馆主题策划</h3>
+                        <p class="text-silver text-sm leading-relaxed">提炼主题立意，构建展览叙事逻辑、内容框架与空间动线。</p>
+                    </div>
+                    <div class="service-card p-6 border border-line">
+                        <h3 class="text-lg mb-2">空间概念设计</h3>
+                        <p class="text-silver text-sm leading-relaxed">完成整体空间创意、展陈节奏与视觉方向，兼顾落地可行性。</p>
+                    </div>
+                    <div class="service-card p-6 border border-line">
+                        <h3 class="text-lg mb-2">项目创意顾问</h3>
+                        <p class="text-silver text-sm leading-relaxed">为在建或筹备中的展厅提供创意把关、内容梳理与优化建议。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-reveal" style="transition-delay:0.1s">
+                <h2 class="text-xl tracking-wider mb-6 text-gold">数字与创新服务</h2>
+                <div class="space-y-5">
+                    <div class="service-card p-6 border border-line">
+                        <h3 class="text-lg mb-2">数字装置艺术定制</h3>
+                        <p class="text-silver text-sm leading-relaxed">围绕主题文化，策划光影、传感、生成式影像与空间声景装置。</p>
+                    </div>
+                    <div class="service-card p-6 border border-line">
+                        <h3 class="text-lg mb-2">AI 展陈工作流</h3>
+                        <p class="text-silver text-sm leading-relaxed">搭建 AI 辅助策展、概念推演与数字内容生产的协作流程。</p>
+                    </div>
+                    <div class="service-card p-6 border border-line">
+                        <h3 class="text-lg mb-2">沉浸式体验创意</h3>
+                        <p class="text-silver text-sm leading-relaxed">规划观众体验路径、交互节点与多媒体内容创意，技术服务于叙事。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 合作流程 -->
+    <section class="py-16 px-6 bg-soft">
+        <div class="max-w-4xl mx-auto scroll-reveal">
+            <h2 class="text-xl tracking-wider mb-10 text-gold">合作流程</h2>
+            <div class="space-y-8">
+                <div class="timeline-item">
+                    <h3 class="text-lg mb-1">沟通需求</h3>
+                    <p class="text-silver text-sm leading-relaxed">明确项目主题、场地、目标观众与预期方向。</p>
+                </div>
+                <div class="timeline-item">
+                    <h3 class="text-lg mb-1">创意提案</h3>
+                    <p class="text-silver text-sm leading-relaxed">输出叙事逻辑、空间概念与技术形式建议。</p>
+                </div>
+                <div class="timeline-item">
+                    <h3 class="text-lg mb-1">方案深化与落地</h3>
+                    <p class="text-silver text-sm leading-relaxed">配合后续设计与施工把控，直至内容与体验落地。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系与二维码 -->
+    <section class="py-16 px-6">
+        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-10 scroll-reveal">
+            <div class="border border-line p-8">
+                <h2 class="text-xl tracking-wider mb-6">商务联系</h2>
+                <div class="space-y-4 text-sm">
+                    <p class="text-silver">微信：<span class="text-paper">（待补充）</span></p>
+                    <p class="text-silver">邮箱：<a href="mailto:215772197@qq.com" class="text-paper hover:text-gold">215772197@qq.com</a></p>
+                    <p class="text-silver leading-relaxed mt-6">网站展示的创意概念可洽谈商业授权与定制开发；未经书面许可，禁止直接盗用方案、图像与文字。</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-6">
+                <div class="border border-line p-6 text-center">
+                    <div class="w-24 h-24 mx-auto img-placeholder flex items-center justify-center text-silver text-xs mb-4">公众号二维码</div>
+                    <p class="text-sm">造境计划</p>
+                </div>
+                <div class="border border-line p-6 text-center">
+                    <div class="w-24 h-24 mx-auto img-placeholder flex items-center justify-center text-silver text-xs mb-4">公众号二维码</div>
+                    <p class="text-sm">顶纸涩行</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 px-6 border-t border-line">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div>
+                <p class="text-lg tracking-[0.2em] mb-2">造境计划 CREATE REALMS</p>
+                <p class="text-silver text-xs">© 2026 徐勇 YOUNGs 版权所有 · 未经书面许可禁止复制商用</p>
+            </div>
+            <div class="flex gap-8 text-sm text-silver">
+                <a href="about.html" class="hover:text-gold">关于</a>
+                <a href="works.html" class="hover:text-gold">作品</a>
+                <a href="articles.html" class="hover:text-gold">文章</a>
+                <a href="contact.html" class="hover:text-gold">联系</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
