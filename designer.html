@@ -109,7 +109,7 @@
                 avatar: "images/avatar-lin.jpg",
                 bio: "十余年博物馆与企业展厅空间设计，关注叙事动线与材料质感，擅长把地方文化转译为可进入、可停留的空间序列。从主题立意到展线节奏，始终围绕观众如何理解一段文化内容来组织空间。",
                 works: [
-                    { title: "地方史博物馆叙事空间", desc: "以年代脉络组织展线，让观众沿时间进入地方记忆，平衡文物展示与阅读节奏。" },
+                    { title: "地方史博物馆叙事空间", img: "images/dwork-1.jpg", desc: "以年代脉络组织展线，让观众沿时间进入地方记忆，平衡文物展示与阅读节奏。" },
                     { title: "能源集团企业展厅", desc: "围绕产业主题梳理空间节奏与展陈序列，把发展历程、核心能力与未来方向分层呈现。" },
                     { title: "非遗主题展陈空间", desc: "把传统工艺的工序与器物转译为可阅读、可停留的展项，兼顾手作温度与空间秩序。" }
                 ]
@@ -122,7 +122,7 @@
                 avatar: "images/avatar-chen.jpg",
                 bio: "以光影、传感与声音为媒介，探索观众身体与空间的互动关系。作品强调克制的诗意，而非技术的堆叠与炫示；每一处感应与反馈都服务于现场情绪与叙事。",
                 works: [
-                    { title: "沉浸式光影传感装置", desc: "观众动线触发光影变化，形成人与空间之间可反复应答的现场关系。" },
+                    { title: "沉浸式光影传感装置", img: "images/dwork-2.jpg", desc: "观众动线触发光影变化，形成人与空间之间可反复应答的现场关系。" },
                     { title: "声景交互回廊", desc: "以环境声与空间层次营造可穿行的听觉场域，声音随位置与动作自然起伏。" },
                     { title: "生成式影像展项原型", desc: "探索算法影像与现场叙事的结合方式，在可控画面与随机生成之间寻找平衡。" }
                 ]
@@ -135,7 +135,7 @@
                 avatar: "images/avatar-su.jpg",
                 bio: "跨足舞台视觉与品牌展陈，擅长以平面视觉、色彩与道具结构建立统一的现场气质。让视觉语言与空间叙事彼此支撑，从主视觉到现场物料保持同一套表达逻辑。",
                 works: [
-                    { title: "戏剧舞台美术设计", desc: "以布景、色彩与道具结构服务舞台叙事，在有限舞台空间里建立层次与焦点。" },
+                    { title: "戏剧舞台美术设计", img: "images/dwork-3.jpg", desc: "以布景、色彩与道具结构服务舞台叙事，在有限舞台空间里建立层次与焦点。" },
                     { title: "品牌发布会视觉系统", desc: "统一主视觉、物料与现场陈列语言，使品牌气质在整场活动中连贯一致。" },
                     { title: "展览导视与平面物料", desc: "梳理展线导视与版面信息层次，让观众在空间中易于辨识方向与内容。" }
                 ]
@@ -148,7 +148,7 @@
                 avatar: "images/avatar-zhao.jpg",
                 bio: "专注数字影片、多媒体内容与生成式影像，负责展项内容创意与画面呈现。在技术实现与文化叙事之间承担衔接与把控，确保多屏内容的节奏、文案与画面彼此衔接。",
                 works: [
-                    { title: "企业形象数字影片", desc: "提炼品牌叙事，完成画面脚本与内容把控，使影像表达贴合企业气质。" },
+                    { title: "企业形象数字影片", img: "images/dwork-4.jpg", desc: "提炼品牌叙事，完成画面脚本与内容把控，使影像表达贴合企业气质。" },
                     { title: "展厅多媒体内容包", desc: "统筹多屏内容的节奏、文案与画面衔接，配合空间动线安排信息密度。" },
                     { title: "互动影像原型开发", desc: "配合装置逻辑验证影像交互方案，在原型阶段确认反馈方式与视觉效果。" }
                 ]
@@ -174,15 +174,19 @@
         });
 
         const worksEl = document.getElementById("works");
-        person.works.forEach((w) => {
+        person.works.forEach((w, i) => {
             const card = document.createElement("article");
             card.className = "ds-card";
             card.innerHTML =
-                '<div class="aspect-[4/3] img-placeholder mb-4 flex items-center justify-center text-silver text-xs">作品封面占位</div>' +
+                '<p class="text-xs tracking-widest text-silver/60 mb-3">代表作品 ' + String(i + 1).padStart(2, "0") + '</p>' +
+                (w.img
+                    ? '<div class="figure-shot aspect-[4/3] mb-3"><img src="' + w.img + '" alt="' + w.title + ' 作品示意" loading="lazy"></div>'
+                    : '') +
                 '<h3 class="text-lg font-semibold tracking-wider mb-2"></h3>' +
-                '<p class="text-silver text-sm leading-relaxed"></p>';
+                '<p class="work-desc text-silver text-sm leading-relaxed"></p>' +
+                (w.img ? '<p class="fig-cap">作品图：AI 生成示意</p>' : '');
             card.querySelector("h3").textContent = w.title;
-            card.querySelector("p").textContent = w.desc;
+            card.querySelector(".work-desc").textContent = w.desc;
             worksEl.appendChild(card);
         });
     </script>

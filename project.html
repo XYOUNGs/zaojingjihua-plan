@@ -70,7 +70,10 @@
         <div class="max-w-7xl mx-auto">
 
             <!-- 主视觉大图 -->
-            <div id="hero" class="aspect-[21/9] img-placeholder mb-10 flex items-center justify-center text-silver text-sm">项目主视觉占位</div>
+            <div id="hero" class="aspect-[21/9] overflow-hidden mb-4 bg-soft border border-line">
+                <img id="hero-img" class="project-hero" alt="">
+            </div>
+            <p id="hero-cap" class="fig-cap mb-10"></p>
 
             <!-- 标题与状态 -->
             <div class="mb-8">
@@ -111,10 +114,20 @@
                 </div>
             </div>
 
-            <!-- 图廊 -->
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="aspect-[4/3] img-placeholder flex items-center justify-center text-silver text-xs">场景图占位</div>
-                <div class="aspect-[4/3] img-placeholder flex items-center justify-center text-silver text-xs">场景图占位</div>
+            <!-- 细部图与图注 -->
+            <div class="grid md:grid-cols-12 gap-8 items-start">
+                <div class="md:col-span-8" id="detail-col">
+                    <figure>
+                        <div class="figure-shot aspect-[4/3]">
+                            <img id="detail-img" alt="" loading="lazy">
+                        </div>
+                        <p id="detail-cap" class="fig-cap"></p>
+                    </figure>
+                </div>
+                <div class="md:col-span-4 md:pt-1" id="note-col">
+                    <p class="text-xs text-silver/70 tracking-widest mb-4">图注说明</p>
+                    <p id="img-note" class="text-silver text-sm leading-loose"></p>
+                </div>
             </div>
 
             <!-- 概念标注 -->
@@ -245,8 +258,187 @@
                     "方法沉淀为可复用的 AI 辅助策展工作流"
                 ],
                 conceptNote: "本项目为 AI 实验室概念研究，属方法构想，非已落地工程；不代表实际施工方案。"
+            },
+
+            {
+                id: 7,
+                title: "城市更新 · 片区记忆馆",
+                status: "概念研究 · 非落地工程",
+                stage: "概念方案",
+                type: "城市更新 / 记忆展馆",
+                direction: "档案叙事 · 街区记忆",
+                tags: "概念研究 / 城市更新 / 记忆展馆",
+                summary: "旧厂房改造的记忆馆，用地图、档案与老照片，把一片街区的来路讲清楚。",
+                overview: "以旧厂房为载体，把片区的地图变迁、居民口述、档案影像组织成一条可阅读的时间线。空间保留砖墙与钢桁架原状，只在必要处加灯箱与展墙，让新信息贴着旧结构生长，而不是覆盖它。方案处于概念阶段，重点研究档案类内容的阅读节奏与在地材料的可用性。",
+                points: [
+                    "以地图与口述档案构成街区时间线",
+                    "保留原结构，展陈介入尽量轻",
+                    "在地材料与旧构件优先复用"
+                ],
+                conceptNote: "本项目为 AI 实验室概念研究，属创意构想，非已落地工程；不代表实际施工方案。"
+            },
+            {
+                id: 8,
+                title: "数字文博 · 文物活化展项",
+                status: "概念研究 · 非落地工程",
+                stage: "概念原型",
+                type: "数字文博 / 展项原型",
+                direction: "实物＋投影叠加",
+                tags: "概念研究 / 数字文博 / 文物活化",
+                summary: "实物展柜叠加一层半透明投影，把纹样与工艺拆开给观众看。",
+                overview: "在文物实物与玻璃展柜之上叠加一层半透明投影，把器物的纹样、结构、工艺步骤逐层拆解，让观众既看到原件，也看懂它如何被做出来。原则是先保文物安全与观看礼仪，再谈技术介入：投影只做解释层，不替代实物，也不制造与史实不符的想象画面。",
+                points: [
+                    "解释层与实物分层，互不替代",
+                    "纹样与工艺按步骤拆解呈现",
+                    "设备与光环境不干扰文物安全"
+                ],
+                conceptNote: "本项目为 AI 实验室概念研究，属创意构想，非已落地工程；不代表实际施工方案。"
+            },
+            {
+                id: 9,
+                title: "企业未来馆 · 数字沙盘",
+                status: "概念研究 · 非落地工程",
+                stage: "概念方案",
+                type: "企业展厅 / 数字沙盘",
+                direction: "沙盘与环屏联动",
+                tags: "概念研究 / 企业展厅 / 数字沙盘",
+                summary: "中央沙盘与环形屏联动，把企业版图与产业布局做成可读的一体化叙事。",
+                overview: "中央数字沙盘承担空间叙事的主轴，环形屏提供数据与场景的上下文，两者由同一套时间轴驱动：讲布局时沙盘亮起对应区域，讲产业时屏幕给出场景与数据。目标是把企业信息从「一墙图板」变成可被理解的连续叙事，同时控制信息密度，避免变成数据堆砌。",
+                points: [
+                    "沙盘与环屏共用一条叙事时间轴",
+                    "区域与产业信息分层出现，不一次性铺满",
+                    "预留运维与内容更新接口"
+                ],
+                conceptNote: "本项目为 AI 实验室概念研究，属创意构想，非已落地工程；不代表实际施工方案。"
+            },
+            {
+                id: 10,
+                title: "山水光影夜游路径",
+                status: "概念研究 · 非落地工程",
+                stage: "概念方案",
+                type: "文旅夜游 / 光影路径",
+                direction: "在地载体 · 低干扰照明",
+                tags: "概念研究 / 文旅夜游 / 光影路径",
+                summary: "以石阶、竹林为投影载体，光只做引导，不抢山水本身的安静。",
+                overview: "夜游不追求满山投影，而是把光落在既有载体上：石阶的纹理、竹竿的竖向节奏、雾气的散射。每一段只给一个视觉主题，亮度与色温随行走距离平缓变化，让人有呼吸的余地。方案重点研究低干扰照明、投影载体选择与夜间安全的关系。",
+                points: [
+                    "光落在既有材质上，不新增遮挡物",
+                    "分段给主题，亮度与色温平缓过渡",
+                    "照明方案与夜间行走安全同步考虑"
+                ],
+                conceptNote: "本项目为 AI 实验室概念研究，属创意构想，非已落地工程；不代表实际施工方案。"
+            },
+            {
+                id: 11,
+                title: "儿童美育空间 · 互动装置",
+                status: "概念研究 · 非落地工程",
+                stage: "概念原型",
+                type: "公共文化 / 儿童美育",
+                direction: "身体尺度 · 可触摸",
+                tags: "概念研究 / 儿童美育 / 互动装置",
+                summary: "低尺度、可触摸、可爬卧的几何软体装置，把美育从观看改成身体经验。",
+                overview: "把美育空间的高度、材料与安全边界全部按儿童身体重做：可爬、可卧、可触摸的几何软体，配合可替换的展示墙与低矮书架。互动不做屏幕依赖，优先用身体动作与材质反馈建立经验，屏幕只承担辅助解说。原型阶段重点验证结构与材料的耐用性。",
+                points: [
+                    "尺度与安全边界按儿童身体重设",
+                    "以身体动作与材质反馈为主，屏幕为辅",
+                    "材料与结构需通过耐用性验证"
+                ],
+                conceptNote: "本项目为 AI 实验室概念研究，属创意构想，非已落地工程；不代表实际施工方案。"
+            },
+            {
+                id: 12,
+                title: "模块化展陈系统",
+                status: "概念研究 · 非落地工程",
+                stage: "方法研究",
+                type: "展陈系统 / 模块化",
+                direction: "标准件 · 可复用",
+                tags: "概念研究 / 展陈系统 / 模块化",
+                summary: "铝框架标准件组合成展台与展架，巡展可拆装、可复用，降低单次布展成本。",
+                overview: "以铝框架与标准连接件为基本单元，组合出展台、展架、灯箱与隔断，同一套构件可适配不同场地与主题。目标是让巡展与临时展摆脱一次性木作：拆装可逆、运输体积可控、五金件可长期复用，把成本从「每次重做」转为「一次投入、多次摊销」。",
+                points: [
+                    "一套标准件覆盖展台、展架、隔断",
+                    "拆装可逆，运输体积可控",
+                    "五金与面材可长期复用与替换"
+                ],
+                conceptNote: "本项目为 AI 实验室概念研究，属创意构想，非已落地工程；不代表实际施工方案。"
             }
         ];
+
+        /* 每个项目的图片与图注：cover 主视觉，detail 细部，note 图注说明 */
+        const MEDIA = {
+            1: {
+                cover: "images/work-1.jpg",
+                coverCap: "灵石煤炭主题馆 · 主展线与工业遗存展区（效果示意，AI 生成）",
+                detail: "images/work-1b.jpg",
+                detailCap: "展柜细部：矿灯、镐具与煤块的原状陈列",
+                note: "主视觉呈现长向动线与灯光关系，细部图对应展柜内的实物陈列方式。两张图均为方案阶段效果示意，现场实景照片待补入。"
+            },
+            2: {
+                cover: "images/work-2.jpg",
+                coverCap: "国电科环集团展厅 · 主展区与通长数字屏（效果示意，AI 生成）",
+                detail: "images/work-2b.jpg",
+                detailCap: "墙面细部：多媒体屏与金属信息条并置",
+                note: "主视觉对应企业信息的总览区，细部图示意信息条与屏幕的收口工艺。图片为效果示意，实际落地版本以现场为准。"
+            },
+            3: {
+                cover: "images/work-3.jpg",
+                coverCap: "灵石蜂蜜馆 · 蜂巢结构与物产陈列（效果示意，AI 生成）",
+                detail: "images/work-3b.jpg",
+                detailCap: "材质细部：背光蜂巢板与陈列罐",
+                note: "主视觉示意蜂巢母题在主展墙上的用法，细部图对应背光材质与物产陈列的质感关系。图片为效果示意，实景图待补。"
+            },
+            4: {
+                cover: "images/work-4.jpg",
+                coverCap: "生成式光影装置构想 · 体积光与地面光池（概念视觉示意，AI 生成）",
+                detail: "images/work-4b.jpg",
+                detailCap: "细部：投影落在灰泥墙面的光斑与噪点",
+                note: "概念阶段用两张图分别说明整体光氛围与材质承接方式，均为 AI 生成的概念视觉，不代表最终设备清单与施工方案。"
+            },
+            5: {
+                cover: "images/work-5.jpg",
+                coverCap: "传感器交互空间原型 · 感应光柱阵列（概念视觉示意，AI 生成）",
+                detail: "images/work-5b.jpg",
+                detailCap: "细部：磨砂柱体的感应光带",
+                note: "概念阶段验证感应触发与光反馈的尺度关系，图为 AI 生成的概念视觉，传感方案与控制逻辑另行研究。"
+            },
+            6: {
+                cover: "images/work-6.jpg",
+                coverCap: "AI 策展叙事推演 · 桌面投影与叙事结构（概念视觉示意，AI 生成）",
+                detail: "images/work-6b.jpg",
+                detailCap: "细部：纸面草图与数字线框叠加",
+                note: "两张图对应「纸面推演」与「数字叠加」两种工作状态，为方法研究的视觉示意，非实际项目现场。"
+            },
+            7: {
+                cover: "images/work-7.jpg",
+                coverCap: "城市更新 · 片区记忆馆（概念视觉示意，AI 生成）",
+                note: "概念阶段示意旧厂房结构与档案展墙的关系，图为 AI 生成的概念视觉，非实际项目现场。"
+            },
+            8: {
+                cover: "images/work-8.jpg",
+                coverCap: "数字文博 · 文物活化展项（概念视觉示意，AI 生成）",
+                note: "示意实物展柜与投影解释层的叠合方式，为概念视觉，不代表最终设备与文物布展方案。"
+            },
+            9: {
+                cover: "images/work-9.jpg",
+                coverCap: "企业未来馆 · 数字沙盘（概念视觉示意，AI 生成）",
+                note: "概念阶段示意沙盘与环屏的空间关系，非实际项目现场，设备清单与尺寸另行深化。"
+            },
+            10: {
+                cover: "images/work-10.jpg",
+                coverCap: "山水光影夜游路径（概念视觉示意，AI 生成）",
+                note: "示意光落在石阶与竹林上的低干扰方式，为概念视觉，照明参数需按现场实测确定。"
+            },
+            11: {
+                cover: "images/work-11.jpg",
+                coverCap: "儿童美育空间 · 互动装置（概念视觉示意，AI 生成）",
+                note: "概念阶段示意低尺度软体装置与阅读区关系，材料与结构安全须另做专项验证。"
+            },
+            12: {
+                cover: "images/work-12.jpg",
+                coverCap: "模块化展陈系统（概念视觉示意，AI 生成）",
+                note: "示意标准件组合出的展台与展架形态，为系统研究的概念视觉，非量产图纸。"
+            }
+        };
 
         const params = new URLSearchParams(window.location.search);
         const id = parseInt(params.get("id"), 10);
@@ -262,6 +454,24 @@
         document.getElementById("field-stage").textContent = proj.stage;
         document.getElementById("overview").textContent = proj.overview;
 
+        const med = MEDIA[proj.id];
+        if (med) {
+            const heroImg = document.getElementById("hero-img");
+            heroImg.src = med.cover;
+            heroImg.alt = proj.title + " 主视觉";
+            document.getElementById("hero-cap").textContent = med.coverCap;
+            document.getElementById("img-note").textContent = med.note;
+            if (med.detail) {
+                const detailImg = document.getElementById("detail-img");
+                detailImg.src = med.detail;
+                detailImg.alt = proj.title + " 细部图";
+                document.getElementById("detail-cap").textContent = med.detailCap;
+            } else {
+                document.getElementById("detail-col").style.display = "none";
+                document.getElementById("note-col").className = "md:col-span-12 md:pt-1";
+            }
+        }
+
         const pointsEl = document.getElementById("points");
         proj.points.forEach((p) => {
             const li = document.createElement("li");
@@ -271,7 +481,7 @@
         });
 
         const noteEl = document.getElementById("concept-note");
-        noteEl.textContent = proj.conceptNote || "项目实景与效果图将在补充素材后更新；当前封面与场景图为版式占位。";
+        noteEl.textContent = proj.conceptNote || "当前封面与细部图为方案效果示意（AI 生成），实景照片与补充素材到位后更新。";
 
         const prev = PROJECTS[(index - 1 + PROJECTS.length) % PROJECTS.length];
         const next = PROJECTS[(index + 1) % PROJECTS.length];
